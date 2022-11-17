@@ -1,0 +1,29 @@
+.body{
+  display: flex;
+  justify-content: center;
+  height: 100%;
+  align-items: center;
+  background-color: #cda673b2;
+}
+
+.login{
+  width: 100%;
+  max-width: 330px;
+  text-align: center;
+}
+.avatar{
+  width: 50%;
+}
+.ancho{
+  width: 80%;
+  opacity: 0.75;
+  font-size: 0.75em;
+}
+
+.spinner{
+  margin: 0 auto;
+}
+
+
+
+

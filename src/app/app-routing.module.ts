@@ -1,7 +1,19 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
-const routes: Routes = [];
+import { LoginComponent } from './components/login/login.component';
+
+//   MEJORA EL PERFORMANCE DEL SISTEMA
+//   // incorporacion de carga perezosa o loasyloading
+//   // al ingresar al dashboard, recien alli se cargan los componentes declarados en dashboad.module.
+const routes: Routes = [
+  { path: '', redirectTo: 'login', pathMatch: 'full' },
+  { path: 'login', component: LoginComponent },
+  { path: 'dashboard', loadChildren: () => import('./components/dashboard/dashboard.module').then((x)=> x.DashboardModule) },
+
+  { path: '**', redirectTo: 'login', pathMatch: 'full' },
+
+];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
